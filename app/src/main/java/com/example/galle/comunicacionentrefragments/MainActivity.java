@@ -8,14 +8,21 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText textonEnviar;
+    private int REQUEST_CODE = 1;
+
+    EditText textoEnviar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textonEnviar = (EditText)findViewById(R.id.texto);
+        textoEnviar = (EditText)findViewById(R.id.texto);
     }
 
+    public void comunicarActivity(View v){
+        Intent i = new Intent(this, Main2Activity.class);
+        i.putExtra("texto", textoEnviar.getText().toString());
+        startActivityForResult(i, REQUEST_CODE);
+    }
 
 }
