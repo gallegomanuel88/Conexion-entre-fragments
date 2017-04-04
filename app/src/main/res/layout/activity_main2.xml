@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.galle.comunicacionentrefragments.Main2Activity">
 
+    <fragment
+        android:layout_width="match_parent"
+        android:id="@+id/fragment_confirmacion"
+        android:name="com.example.galle.comunicacionentrefragments.BlankFragment"
+        android:layout_height="match_parent"/>
 </android.support.constraint.ConstraintLayout>
